@@ -13,8 +13,11 @@ from peft import LoraConfig, get_peft_model
 # Ensure CUDA is available
 device = "cuda" if torch.cuda.is_available() else "cpu"
 
-# Load Cardiovascular Dataset
-df = pd.read_csv("cardio_train.csv", sep=";")
+# URL of the dataset (Replace with the actual URL)
+csv_url = "https://raw.githubusercontent.com/yourusername/repository/main/cardio_train.csv"
+
+# Load Cardiovascular Dataset directly from the internet
+df = pd.read_csv(csv_url, sep=";")
 
 # Convert age from days to years
 df["age"] = (df["age"] / 365).astype(int)
