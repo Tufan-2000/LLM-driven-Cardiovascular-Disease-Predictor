@@ -52,9 +52,8 @@ Diagnosis: {"Has Cardiovascular Disease" if row['cardio'] == 1 else "No Cardiova
 # Apply transformation
 df["text"] = df.apply(row_to_text, axis=1)
 
-# **User Input: Number of Examples**
-num_examples = int(input("Enter the number of examples to use for fine-tuning (max 70,000): "))
-df = df.sample(n=min(num_examples, len(df)), random_state=42)  # Select random subset
+# Select 500 fixed examples for fine-tuning
+df = df.sample(n=min(500, len(df)), random_state=42)  # Select random 500 samples
 
 # Convert to Hugging Face Dataset format
 dataset = Dataset.from_dict({"text": df["text"].tolist()})
