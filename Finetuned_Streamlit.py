@@ -1,6 +1,8 @@
 import os
 import torch
 import pandas as pd
+import urllib.request
+from io import StringIO
 from datasets import Dataset
 from transformers import (
     AutoTokenizer,
@@ -14,7 +16,9 @@ from peft import LoraConfig, get_peft_model
 device = "cuda" if torch.cuda.is_available() else "cpu"
 
 # URL of the dataset (Replace with the actual URL)
-csv_url = "https://raw.githubusercontent.com/yourusername/repository/main/cardio_train.csv"
+# Google Drive File ID (Extract from the shareable link)
+file_id = "1rC80Zf_4GUiqUjtI2BnNtmDhSO2YgNgI"
+csv_url = f"https://drive.google.com/uc?id={file_id}"
 
 # Load Cardiovascular Dataset directly from the internet
 df = pd.read_csv(csv_url, sep=";")
