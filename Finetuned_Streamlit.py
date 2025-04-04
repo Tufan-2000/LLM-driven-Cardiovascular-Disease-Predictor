@@ -4,12 +4,7 @@ import pandas as pd
 import urllib.request
 from io import StringIO
 from datasets import Dataset
-from transformers import (
-    AutoTokenizer,
-    AutoModelForCausalLM,
-    TrainingArguments,
-    Trainer
-)
+from transformers import (AutoTokenizer, AutoModelForCausalLM, TrainingArguments, Trainer)
 from peft import LoraConfig, get_peft_model
 
 # Ensure CUDA is available
