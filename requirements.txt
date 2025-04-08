@@ -24,7 +24,7 @@ flask-cors==5.0.1
 
 # Tokenization / Text Handling
 tokenizers==0.21.1
-sentencepiece==0.1.99
+# sentencepiece==0.1.99
 
 # HuggingFace ecosystem
 datasets==3.4.1
