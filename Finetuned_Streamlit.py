@@ -7,7 +7,7 @@ import speech_recognition as sr
 import io
 
 # Load model and tokenizer from local fine-tuned directory
-MODEL_PATH = "BioMedLM-Cardio-Fold{fold}"
+MODEL_PATH = "Tufan1/BioMedLM-Cardio-Fold{fold}"
 tokenizer = AutoTokenizer.from_pretrained(MODEL_PATH)
 model = AutoModelForCausalLM.from_pretrained(MODEL_PATH)
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
