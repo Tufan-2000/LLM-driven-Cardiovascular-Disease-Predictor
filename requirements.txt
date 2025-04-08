@@ -37,3 +37,5 @@ omegaconf==2.3.0
 # Others
 pyyaml==6.0.2
 joblib==1.4.2
+ffmpeg-python==0.2.0
+
