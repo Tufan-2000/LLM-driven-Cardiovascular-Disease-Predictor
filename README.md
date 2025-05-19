@@ -33,9 +33,8 @@ To develop a rapid, scalable, accessible, and trustworthy AI-based smart screeni
 ---
 
 ## Model Hosting
-Model hosted on Hugging Face: 🧠 Link to Model
 
-LoRA-adapted version of stanford-crfm/BioMedLM
+LoRA-adapted version - "Tufan1/BioClinicalBERT-Cardio-Classifier-Fold-dummy-Final10"
 
 Training: 70,000 samples, 10-fold CV, uploaded
 
