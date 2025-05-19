@@ -39,14 +39,14 @@ LoRA-adapted version of stanford-crfm/BioMedLM
 
 Training: 70,000 samples, 10-fold CV, uploaded
 
-## Sample Output
+## Output
 Input Prompt: "Ms. Patel, a 60 year old woman with height 176 centimeters tall and weight 54 kilograms, presented for her annual cardiac evaluation. Her blood pressure 140/90 mmHg raised concerns, particularly when combined with notably lipid profiles showing total cholesterol is peak concentrations. Recent lab work revealed fasting blood glucose is high range at 128 mg/dL. The patient acknowledged being a regular tobacco user (10 cigarettes/day) and consuming 3-4 alcohol drinks weekly. Despite her sedentary office job, she maintains moderate physical activity through daily 30-minute brisk walks. Family history reveals paternal hypertension and maternal diabetes. Current symptoms include occasional dizziness when standing, though she denies chest pain or palpitations. Dietary assessment showed high saturated fat intake, while stress levels remain manageable through yoga practice"
 
 Output: Prediction: CVD (Confidence: 79.79%)
 ![image](https://github.com/user-attachments/assets/acdc290d-0aee-4a4e-90f9-fe6f7e541e70)
 
 
-##🧪 Evaluation Metrics
+## 🧪 Evaluation Metrics 
 
 ![image](https://github.com/user-attachments/assets/a612dc4e-db4a-48c3-888a-f7f7f5e0c01a)
 
