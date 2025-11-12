@@ -16,7 +16,7 @@ st.set_page_config(page_title="Cardio Disease Predictor", layout="wide")
 if st.button("🔄 Reset All"):
     for key in list(st.session_state.keys()):
         del st.session_state[key]
-    st.session_state["input_mode"] = "Numeric Input"  # Reset radio button to default
+    st.session_state["input_mode"] = "Manual Input"  # Reset radio button to default
     st.rerun()
 
 st.title("🫀 LLM Powered Cardiovascular Disease Predictor")
@@ -258,11 +258,11 @@ if "prediction_result" not in st.session_state:
 
 input_type = st.radio(
     "Select input method:",
-    ["Numeric Input", "Text Description", "Audio Recording"],
+    ["Manual Input", "Text Input", "Audio Input"],
     key="input_mode"
 )
 
-if input_type == "Numeric Input":
+if input_type == "Manual Input":
     with st.form("manual_form"):
         col1, col2 = st.columns(2)
         with col1:
@@ -294,7 +294,7 @@ if input_type == "Numeric Input":
             st.session_state.prediction_result = predict(st.session_state.features)
             st.session_state.prediction_done = True
 
-if input_type == "Text Description":
+if input_type == "Text Input":
     example_text = (
         "A 60 year old female having height 176 cm & weight 54 kg, "
         "with BP 140/90, glucose is high. She used to take alcohol, "
@@ -305,7 +305,7 @@ if input_type == "Text Description":
         st.session_state.features = text_to_features(text_input)
         st.session_state.prediction_done = False
 
-if input_type == "Audio Recording":
+if input_type == "Audio Input":
     audio_file = st.file_uploader("Upload audio file", type=["wav", "mp3", "ogg"])
     recorded_audio = audiorecorder("Start Recording", "Stop Recording")
 
