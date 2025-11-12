@@ -58,6 +58,7 @@ This project is open-source for academic use. Contact for commercial application
 
 ## 🙋‍♂️ Author
 - Tufan Paul
+- Data Scientist, KPI Partners, Bengaluru
 - M.Tech Clinical Engineering, IIT Madras
 - Email: tufanpaul2016@gmail.com
 - GitHub: Tufan-2000
